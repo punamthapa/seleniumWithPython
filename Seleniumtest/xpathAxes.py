@@ -17,6 +17,15 @@ driver.get("https://money.rediff.com/gainers/bse/daily/groupall")
 # time.sleep(5)
 
 # child : since td has no child, so we went to ancestor tr and get its child
-childs = driver.find_element(By.XPATH,"//a[contains(text(),'India Tourism De')]/ancestor::tr/child::td")
-print(len(childs))
-time.sleep(5)
+# childs = driver.find_element(By.XPATH,"//a[contains(text(),'India Tourism De')]/ancestor::tr/child::td")
+# print(len(childs))
+# time.sleep(5)
+
+# ancestor
+# text_msg =driver.find_element(By.XPATH,"//a[contains(text(),'India Tourism De')]/ancestor::tr").text
+# print(text_msg)
+
+# descendent
+text_msg =driver.find_element(By.XPATH,"//a[contains(text(),'India Tourism De')]/ancestor::tr/descendant::*")
+print(len(text_msg))
+driver.close()
