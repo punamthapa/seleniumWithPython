@@ -7,25 +7,42 @@ driver = webdriver.Chrome()
 driver.get("https://money.rediff.com/gainers/bse/daily/groupall")
 
 # self
-# text_msg =driver.find_element(By.XPATH,"//a[contains(text(),'India Tourism De')]/self::a").text
-# print(text_msg)
-# time.sleep(5)
+text_msg =driver.find_element(By.XPATH,"//a[contains(text(),'India Tourism De')]/self::a").text
+print(text_msg)
+time.sleep(5)
 
 # parent : since parent of this selector is td
-# text_msg =driver.find_element(By.XPATH,"//a[contains(text(),'India Tourism De')]/parent::td").text
-# print(text_msg)
-# time.sleep(5)
+text_msg =driver.find_element(By.XPATH,"//a[contains(text(),'India Tourism De')]/parent::td").text
+print(text_msg)
+time.sleep(5)
 
 # child : since td has no child, so we went to ancestor tr and get its child
-# childs = driver.find_element(By.XPATH,"//a[contains(text(),'India Tourism De')]/ancestor::tr/child::td")
-# print(len(childs))
-# time.sleep(5)
+childs = driver.find_element(By.XPATH,"//a[contains(text(),'India Tourism De')]/ancestor::tr/child::td")
+print(len(childs))
+time.sleep(5)
 
 # ancestor
-# text_msg =driver.find_element(By.XPATH,"//a[contains(text(),'India Tourism De')]/ancestor::tr").text
-# print(text_msg)
+text_msg =driver.find_element(By.XPATH,"//a[contains(text(),'India Tourism De')]/ancestor::tr").text
+print(text_msg)
 
 # descendent
 text_msg =driver.find_element(By.XPATH,"//a[contains(text(),'India Tourism De')]/ancestor::tr/descendant::*")
 print(len(text_msg))
+
+# following
+text_msg =driver.find_element(By.XPATH,"//a[contains(text(),'India Tourism De')]/ancestor::tr/following::*")
+print(len(text_msg))
+
+# following-sibling
+text_msg =driver.find_element(By.XPATH,"//a[contains(text(),'India Tourism De')]/ancestor::tr/following-sibling::*")
+print(len(text_msg))
+
+# preceding
+text_msg =driver.find_element(By.XPATH,"//a[contains(text(),'India Tourism De')]/ancestor::tr/preceding::*")
+print(len(text_msg))
+
+# preceding-sibling
+text_msg =driver.find_element(By.XPATH,"//a[contains(text(),'India Tourism De')]/ancestor::tr/preceding-sibling::*")
+print(len(text_msg))
+
 driver.close()
