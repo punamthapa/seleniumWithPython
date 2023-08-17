@@ -27,4 +27,10 @@ checkboxes = driver.find_element(By.XPATH,"//input[@type='checkbox',and contains
 #     if weekname =="monday" or weekname=="sunday":
 #         checkbox.click()
 
-# 4) select last two checkbox
+# 4) select last two checkboxes
+#range(5,7) --> 6,7
+#totalnumberofelelements-2=starting index
+# for i in range(len(checkboxes)-2,len(checkboxes)):
+#     checkboxes[i].click()
+
+
