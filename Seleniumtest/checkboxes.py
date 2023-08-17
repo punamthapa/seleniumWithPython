@@ -33,7 +33,12 @@ checkboxes = driver.find_element(By.XPATH,"//input[@type='checkbox',and contains
 # for i in range(len(checkboxes)-2,len(checkboxes)):
 #     checkboxes[i].click()
 
-select first 2 checkboxes
-for i in range(len(checkboxes)):
-    if i<2:
-        checkboxes[i].click()
+#5) select first 2 checkboxes
+# for i in range(len(checkboxes)):
+#     if i<2:
+#         checkboxes[i].click()
+
+# 6) clearing all the check checkboxes
+# for checkbox in checkboxes:
+    # if checkbox.is_selected():
+    #     checkbox.click()
