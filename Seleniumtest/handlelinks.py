@@ -12,5 +12,8 @@ driver.get("https://demo.nopcommerce.com")
 # using tag name
 links = driver.find_elements(By.TAG_NAME,'a')
 # using xpath
-links = driver.find_elements(By.XPATH,'//a')
+# links = driver.find_elements(By.XPATH,'//a')
 print("Total number of links:", len(links))
+
+for link in links:
+    print(link.text)
