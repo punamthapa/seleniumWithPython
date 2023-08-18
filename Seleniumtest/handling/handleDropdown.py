@@ -17,7 +17,13 @@ dropdownCountry=Select(driver.find_element(By.XPATH,"//select[@id='input-country
 
 # capture all the options and print them
 alloptions =dropdownCountry.options
-print("total number of options",len(alloptions))
+# print("total number of options",len(alloptions))
+#
+# for alloption in alloptions:
+#     print(alloption.text)
 
-for alloption in alloptions:
-    print(alloption.text)
+# select option from dropdown without usong built-in method
+for opt in alloptions:
+    if opt.text=="Nepal":
+        opt.click()
+        break
