@@ -9,5 +9,8 @@ driver.get("https://demo.nopcommerce.com")
 # driver.find_element(By.PARTIAL_LINK_TEXT,"Digital").click()
 
 # find number of links in page
+# using tag name
 links = driver.find_elements(By.TAG_NAME,'a')
+# using xpath
+links = driver.find_elements(By.XPATH,'//a')
 print("Total number of links:", len(links))
