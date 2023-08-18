@@ -15,5 +15,6 @@ links = driver.find_elements(By.TAG_NAME,'a')
 # links = driver.find_elements(By.XPATH,'//a')
 print("Total number of links:", len(links))
 
+# print all link text
 for link in links:
     print(link.text)
