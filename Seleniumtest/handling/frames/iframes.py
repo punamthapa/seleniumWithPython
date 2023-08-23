@@ -18,4 +18,5 @@ driver.switch_to.default_content()
 
 driver.switch_to.frame("classFrame")
 driver.find_element(By.XPATH,"/html[1]/body[1]/header[1]/nav[1]/div[1]/div[1]/ul[1]/li[8]").click()
+
 time.sleep(5)
