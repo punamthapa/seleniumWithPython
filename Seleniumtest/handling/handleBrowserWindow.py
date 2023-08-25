@@ -15,12 +15,22 @@ print(windowId)
 driver.find_element(By.XPATH,"//a[normalize-space()='OrangeHRM, Inc']").click()
 time.sleep(5)
 windowIds=driver.window_handles
-parentId=windowIds[0]  #will give same as first one
-childId =windowIds[1]
-print(childId)
 
-driver.switch_to.window(childId)
-print(driver.title)
 
-driver.switch_to.window(parentId)
-print(driver.title)
+# approach 1
+# parentId=windowIds[0]  #will give same as first one
+# childId =windowIds[1]
+# print(childId)
+#
+# driver.switch_to.window(childId)
+# print(driver.title)
+#
+# driver.switch_to.window(parentId)
+# print(driver.title)
+
+# approach 2
+
+for windid in windowIds:
+    driver.switch_to.window(windid)
+    if driver.title=="OrangeHRM HR Software | Free & Open Source HR Software | HRMS | HRIS | OrangeHRM" or driver.title =="XYZ":
+        driver.close()
