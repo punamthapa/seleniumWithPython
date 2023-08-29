@@ -10,4 +10,8 @@ driver.maximize_window()
 
 
 # count the number of rows and columns
-driver.find_element(By.XPATH,"//table[@name='BookTable']//tr")
+noOfRows=len(driver.find_element(By.XPATH,"//table[@name='BookTable']//tr"))
+print(noOfRows)
+
+noOfColumns=len(driver.find_element(By.XPATH,"//table[@name='BookTable']//tr[1]/th"))
+print(noOfColumns)
