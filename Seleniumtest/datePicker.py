@@ -23,7 +23,7 @@ driver.find_element(By.XPATH,"//input[@id='datepicker']").click()  #open datepic
 
 while True:
     mon= driver.find_element(By.XPATH,"//span[@class='ui-datepicker-month']").text
-    yr=driver.find_element(By.XPATH,"//span[@class='ui-datepicker-month']").text
+    yr=driver.find_element(By.XPATH,"//span[@class='ui-datepicker-year']").text
 
     if mon==month and yr==year:
         break;
