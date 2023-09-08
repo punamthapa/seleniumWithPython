@@ -11,4 +11,23 @@ driver.maximize_window()
 driver.switch_to.frame(0)  #switch to frame
 
 # mm/dd/yyyy
-driver.find_element(By.XPATH,"//input[@id='datepicker']").send_keys("02/22/2024")
+# driver.find_element(By.XPATH,"//input[@id='datepicker']").send_keys("02/22/2024")
+
+# time.sleep(5)
+
+year="2024"
+month="11"
+day="19"
+
+driver.find_element(By.XPATH,"//input[@id='datepicker']").click()  #open datepicker
+
+while True:
+    mon= driver.find_element(By.XPATH,"//span[@class='ui-datepicker-month']").text
+    yr=driver.find_element(By.XPATH,"//span[@class='ui-datepicker-month']").text
+
+    if mon==month and yr==year:
+        break;
+    else:
+        driver.find_element(By.XPATH,"//span[@class='ui-icon ui-icon-circle-triangle-e']").click()  #next arrow
+
+time.sleep(5)
