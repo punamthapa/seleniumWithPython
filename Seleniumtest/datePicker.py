@@ -16,7 +16,7 @@ driver.switch_to.frame(0)  #switch to frame
 # time.sleep(5)
 
 year="2024"
-month="11"
+month="November"
 day="19"
 
 driver.find_element(By.XPATH,"//input[@id='datepicker']").click()  #open datepicker
@@ -28,6 +28,6 @@ while True:
     if mon==month and yr==year:
         break;
     else:
-        driver.find_element(By.XPATH,"//span[@class='ui-icon ui-icon-circle-triangle-e']").click()  #next arrow
+        driver.find_element(By.XPATH,"/html[1]/body[1]/div[1]/div[1]/a[2]/span[1]").click()  #next arrow
 
 time.sleep(5)
