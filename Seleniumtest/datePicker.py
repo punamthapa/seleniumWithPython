@@ -30,4 +30,13 @@ while True:
     else:
         driver.find_element(By.XPATH,"/html[1]/body[1]/div[1]/div[1]/a[2]/span[1]").click()  #next arrow
 
+
+# select date
+dates= driver.find_element(By.XPATH,"//div[@id='ui-datepicker-div']//table/tbody/tr/td/a")
+
+for ele in dates:
+    if ele.text==day:
+        ele.click()
+        break
+
 time.sleep(5)
